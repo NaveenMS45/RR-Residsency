@@ -1,35 +1,35 @@
 # RR-Resisency
 
-#### Server
+# Server
 
---> Move to the server folder using the following command - cd server.
---> Update the script in the package.json file : script {start : nodemon app.js}.
+--> Move to the server folder using the following command - cd server.<br>
+--> Update the script in the package.json file : script {start : nodemon app.js}.<br>
 
-### Environment variable
+# Environment variable
 
---> Create a .env file.
---> Add the following command and save the file.
-    --> mongoUrl = mongodb+srv://MS:45@node-express-projects.khla8fo.mongodb.net/RRR?retryWrites=true&w=majority
---> start the server - "npm start".
---> The server will start listening to the loaclhost:5000 .
+--> Create a .env file. <br>
+--> Add the following command and save the file.<br>
+    --> mongoUrl = mongodb+srv://MS:45@node-express-projects.khla8fo.mongodb.net/RRR?retryWrites=true&w=majority. <br>
+--> start the server - "npm start". <br>
+--> The server will start listening to the loaclhost:5000 .<br>
 
-### Client
+# Client
 
---> Go to the client folder and use the start command - "npm start"
---> It will redirect to the localhost:3000 .
+--> Go to the client folder and use the start command - "npm start". <br>
+--> It will redirect to the localhost:3000 . <br>
 
-### Protected Routes
+# Protected Routes
 
   # Profile Route
   
-  --> The profile route is will be accessed, only the user is logged in .
-  --> The user details will be avaliable there.
+  --> The profile route is will be accessed, only the user is logged in .<br>
+  --> The user details will be avaliable there. <br>
   
   # Admin Route
   
-  --> The admin route is also protected .
-  --> The user with admin credentials can access the admin route .
-  --> The admin can see all the user bookings, can add new rooms to the database, can see all the users of the application.
+  --> The admin route is also protected .<br>
+  --> The user with admin credentials can access the admin route .<br>
+  --> The admin can see all the user bookings, can add new rooms to the database, can see all the users of the application. <br>
   
   ### Database Schema
   
@@ -74,7 +74,7 @@
 
   # User Schema
   
-  const UserSchema = mongoose.Schema({
+    const UserSchema = mongoose.Schema({
     name : {
         type : String,
         required : true
@@ -97,7 +97,7 @@
 
   # Booking Schema
   
-  const BookingSchema = mongoose.Schema({
+    const BookingSchema = mongoose.Schema({
     room:{type:String, required:true},
     roomId:{type:String, required:true},
     userId:{type:String , required:true},
