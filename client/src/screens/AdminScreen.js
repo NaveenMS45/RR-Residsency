@@ -186,15 +186,22 @@ export function Users() {
   const [users, setUsers] = useState();
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
+  const url = "/api/v1/auth/getAllUsers";
+  const fetchInfo = () => {
     try {
-      const userData = axios.get("/api/v1/auth/getAllUsers").data;
-      setUsers(userData);
+      setLoading(true);
+      axios.get(url).then((res) => {
+        setUsers(res.data);
+      });
       setLoading(false);
-    } catch (error) {
-      console.log(error);
+    } catch (e) {
+      console.log(e);
       setLoading(false);
     }
+  };
+
+  useEffect(() => {
+    fetchInfo();
   }, []);
 
   return (
